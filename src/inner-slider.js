@@ -245,8 +245,9 @@ export class InnerSlider extends React.Component {
         slideCount: this.props.children.length
       });
       this.props.children.forEach(child => {
-        childrenWidths.push(child.props.style.width);
-        trackWidth += child.props.style.width;
+        let chidlWidth = child.props.style.width || 0;
+        childrenWidths.push(childWidth);
+        trackWidth += childWidth;
       });
       for (let i = 0; i < preClones; i++) {
         trackLeft += childrenWidths[childrenWidths.length - 1 - i];

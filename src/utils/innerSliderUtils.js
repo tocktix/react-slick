@@ -738,8 +738,7 @@ export const getTrackLeft = spec => {
           trackElem.children[slide].offsetWidth;
       }
       targetLeft -= parseInt(spec.centerPadding);
-      var offsetWidth = targetSlide.offsetWidth || 0;
-      targetLeft += targetSlide && (listWidth - offsetWidth) / 2;
+      targetLeft += targetSlide && (listWidth - targetSlide.offsetWidth) / 2;
     }
   }
 
